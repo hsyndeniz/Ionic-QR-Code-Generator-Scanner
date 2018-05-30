@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic QR Code Scanner
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<!--
+	<button ion-button round block color='primary' (click)='createCode()'>
+		Create QR Code
+	</button>
+
+<ion-card *ngIf="created_code">
+
+	<ngx-qrcode [qrc-value]="created_code"></ngx-qrcode>
+
+	<ion-card-content>
+		<h2>Encoded Data</h2>
+
+		<p>{{ created_code }}</p>
+		
+	</ion-card-content>
+</ion-card>
+-->
+
+<ion-card *ngIf="scanned_code">
+
+	<ion-card-content>
+		<h2>Scanned Data</h2>
+
+		<p>{{ scanned_code }}</p>
+		
+	</ion-card-content>
+</ion-card>
+
+<ion-fab right bottom>
+	<button (click)='scanCode()' ion-fab color="dark"><ion-icon name="qr-scanner"></ion-icon></button>
+</ion-fab>
+
+</ion-content>
